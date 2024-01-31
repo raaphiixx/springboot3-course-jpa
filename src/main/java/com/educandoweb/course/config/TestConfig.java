@@ -7,7 +7,7 @@ import com.educandoweb.course.entites.User;
 import com.educandoweb.course.entites.enums.OrderStatus;
 import com.educandoweb.course.repositories.CategoryRepository;
 import com.educandoweb.course.repositories.OrderRepository;
-import com.educandoweb.course.repositories.ProductRespository;
+import com.educandoweb.course.repositories.ProductRepository;
 import com.educandoweb.course.repositories.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
@@ -28,7 +28,7 @@ public class TestConfig implements CommandLineRunner {
     private CategoryRepository categoryRepository;
 
     @Autowired
-    private ProductRespository productRespository;
+    private ProductRepository productRepository;
     @Override
     public void run(String... args) throws Exception {
 
@@ -44,7 +44,7 @@ public class TestConfig implements CommandLineRunner {
         Product p5 = new Product(null, "Rails for Dummies", "Cras fringilla convallis sem vel faucibus.", 100.99, "");
 
         categoryRepository.saveAll(Arrays.asList(cat1, cat2, cat3));
-        productRespository.saveAll(Arrays.asList(p1, p2, p3, p4, p5));
+        productRepository.saveAll(Arrays.asList(p1, p2, p3, p4, p5));
 
 
         User u1 = new User(null, "Maria Brown", "maria@gmail.com", "999999999", "123456");

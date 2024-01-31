@@ -1,7 +1,7 @@
 package com.educandoweb.course.services;
 
 import com.educandoweb.course.entites.Product;
-import com.educandoweb.course.repositories.ProductRespository;
+import com.educandoweb.course.repositories.ProductRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -12,14 +12,14 @@ import java.util.Optional;
 public class ProductService {
 
     @Autowired
-    private ProductRespository productRespository;
+    private ProductRepository productRepository;
 
     public List<Product> findAll() {
-        return productRespository.findAll();
+        return productRepository.findAll();
     }
 
     public Product findById(Long id) {
-        Optional<Product> obj = productRespository.findById(id);
+        Optional<Product> obj = productRepository.findById(id);
         return obj.get();
     }
 }
