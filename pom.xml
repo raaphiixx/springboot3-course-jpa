@@ -9,7 +9,7 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.educandoweb</groupId>
-	<artifactId>course</artifactId>
+	<artifactId>springboot3-course-jpa</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>course</name>
 	<description>Demo project for Spring Boot</description>
